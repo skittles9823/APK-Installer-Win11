@@ -7,6 +7,7 @@ A simple script to install apk files to Windows Subsystem for Android on Windows
 2. then execute the following commands in an elevated powershell terminal (or cmd but remove the `cmd /c` part from the commands)
     - ```cmd /c assoc .apk=androidpackage```
     - ```cmd /c ftype androidpackage=pwsh.exe -File `"%UserProfile%\Documents\apkinstall.ps1`" `"%1`"```
+3. You may need to change pwsh.exe to powershell.exe if you aren't using PowerShell 7.x.x from https://aka.ms/powershell
 
 ## Notice
 The script assumes you have platform-tools installed and set up in your system environmental variables, make sure you are able to run the command `adb` from any location or the script will error when you try to open an APK file
